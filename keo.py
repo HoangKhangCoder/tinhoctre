@@ -1,0 +1,5 @@
+a = int(input())
+b = int(input())
+dis = (20 + a) - (25 + b)
+print(dis)
+print(abs(dis))

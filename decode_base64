@@ -1,0 +1,16 @@
+import base64
+
+def decode_base64(encoded_string):
+    try:
+        # Giải mã chuỗi Base64
+        decoded_bytes = base64.b64decode(encoded_string)
+        # Chuyển đổi bytes thành chuỗi (nếu dữ liệu là text)
+        decoded_string = decoded_bytes.decode('utf-8')
+        return decoded_string
+    except Exception as e:
+        return f"Lỗi khi giải mã: {str(e)}"
+
+# Ví dụ sử dụng
+encoded_data = "SGVsbG8gV29ybGQh"  # "Hello World!" mã hóa Base64
+decoded_data = decode_base64(encoded_data)
+print("Dữ liệu đã giải mã:", decoded_data)
